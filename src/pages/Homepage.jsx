@@ -1,5 +1,14 @@
-import QuestionsList from "../components/QuestionsList";
+import { useState } from "react";
+
+import Categories from "../components/Categories";
 
 export default function Homepage() {
-  return <div>This Homepage</div>;
+  const [questions, setQuestions] = useState([]);
+
+  return (
+    <div>
+      This Homepage
+      <Categories questions={questions} setQuestions={setQuestions} />
+    </div>
+  );
 }
